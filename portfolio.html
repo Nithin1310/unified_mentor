@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manthapuri Nithin | Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
+  <header class="sticky-header">
+    <div class="logo">MANTHAPURI NITHIN</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="" download="MANTHAPURI-NITHIN-FlowCVVV.pdf" target="_blank" class="resume-btn">Resume</a>
+    </nav>
+  </header>
+
+  <section class="home">
+    <div class="intro">
+      <img src="profile.jpg" alt="Profile Picture" class="profile-img" />
+      <h1>Hi, I’m Manthapuri Nithin</h1>
+      <p>A passionate Front End Developer & Software Developer based in Hyderabad, India.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m currently pursuing a B.Tech in Computer Science from MLR Institute of Technology. My focus lies in full-stack development, frontend technologies like ReactJS, Vue.js, Firebase, and WordPress, as well as data analysis and OpenCV image processing.</p>
+    <p>Proficient in designing and developing applications with Java, Python, JavaScript, HTML, CSS, and ReactJS. Database management, SQL,
+        MongoDB, and WordPress website design. Problem-solving, debugging, and algorithm understanding through personal projects and online
+        courses. Ready to contribute to innovative software development projects and dive into dynamic work settings</p>
+  </section>
+  <div class="education">
+    <h2>Education</h2>
+    <ul>
+      <li>
+        <strong>2022 – 2026:</strong> B.Tech in Computer Science<br />
+        <span>MLR Institute of Technology – CGPA: 8.10</span>
+      </li>
+      <li>
+        <strong>2020 – 2022:</strong> Intermediate<br />
+        <span>Narayana Junior College – Percentage: 85.9%</span>
+      </li>
+      <li>
+        <strong>2020:</strong> SSC<br />
+        <span>Dr. KKR's Goutham High School – Percentage: 100%</span>
+      </li>
+    </ul>
+  </div>  
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill">
+      <label>Java</label>
+      <div class="progress"><div class="progress-bar java"></div></div>
+    </div>
+    <div class="skill">
+      <label>Python</label>
+      <div class="progress"><div class="progress-bar python"></div></div>
+    </div>
+    <div class="skill">
+      <label>HTML, CSS, JS</label>
+      <div class="progress"><div class="progress-bar htmlcssjs"></div></div>
+    </div>
+    <div class="skill">
+      <label>Data Base Management Systems</label>
+      <div class="progress"><div class="progress-bar db"></div></div>
+    </div>
+    <div class="skill">
+      <label>Data Structures using C</label>
+      <div class="progress"><div class="progress-bar ds"></div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card" onclick="showDetails('proj1')">
+        <h3>Student Teacher Appointment System</h3>
+      </div>
+      <div class="project-card" onclick="showDetails('proj2')">
+        <h3>GYM Management System</h3>
+      </div>
+      <div class="project-card" onclick="showDetails('proj3')">
+        <h3>DocHere Booking</h3>
+      </div>
+      <div class="project-card" onclick="showDetails('proj4')">
+        <h3>Image Filter Tool (OpenCV)</h3>
+      </div>
+    </div>
+
+    <div class="project-details" id="proj1">
+      <h4>Student Teacher Appointment System</h4>
+      <p>Created using ReactJS for scheduling meetings and managing profiles. Real-time updates and responsive UI.</p>
+      <p>Booking appointment systems, either online or through traditional queueing
+        systems, are now popular. Several businesses, such as scheduling an appointment,
+        employ various Web-based appointment systems for their patients, which improve
+        the efficiency of the appointment process, reducing patient wait times and
+        increasing the total number of patients treated. This research proposes a web-
+        based appointment booking system that allows students and lecturers to be aware
+        of their appointment time regardless of where they are by using the web or mobile
+        devices. By connecting to the Internet, students and instructors can easily access
+        the system. It also permits students to send any message, including the
+        appointment's purpose and timing.</p>
+    </div>
+    <div class="project-details" id="proj2">
+      <h4>GYM Management System</h4>
+      <p>Built with ReactJS & Firebase for handling diet plans, billing, and membership packages.</p>
+      <p>Payment receipts at many Gyms are printed on paper. As a result, keeping all of
+        the paper receipts safe is tough for both gym members and gym trainers. When
+        members misplace their receipts, it might cause problems. Another issue that a
+        gym owner may have is that manually distributing messages about the gym's
+        working and non-working days becomes tough. These issues can be solved if there
+        is an online application available.
+        This project can benefit both gym owners and gym users. Because all receipts are
+        stored in a digital format in this program, there is no risk of losing any confidential
+        receipts. This program will also alert the user (gym members) of their fees, as well
+        as the gym owner of payment receipts. In the future, this app could be expanded
+        to include a supplement store, nutrition advice, personal training, and other
+        features.</p>
+    </div>
+    <div class="project-details" id="proj3">
+      <h4>DocHere Booking</h4>
+      <p>WordPress-based doctor appointment booking platform with specialty filters and availability checks.</p>
+    </div>
+    <div class="project-details" id="proj4">
+      <h4>Image Filter Tool (OpenCV)</h4>
+      <p>Python-based web app using OpenCV to apply filters and change image backgrounds dynamically.</p>
+    </div>
+  </section>
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Front End Developer Intern - Unified Mentor Pvt Ltd (Apr-Jun 2025)</h3>
+        <p>Built projects using ReactJS, Vue.js, Redux, Hooks, Git, and WebPack.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+        <label> Name : </label>
+      <input type="text" placeholder="Your Name" required />
+      <label> Email : </label>
+      <input type="email" placeholder="Your Email" required />
+      <label> Subject : </label>
+      <input type="text" placeholder="Subject" required />
+      <label> Message : </label>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2025 Manthapuri Nithin. All rights reserved.</p>
+  </footer>
+  <script src="portfolio.js"></script>
+</body>
+</html>

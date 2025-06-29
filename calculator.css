@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(120deg, #f093fb, #f5576c); /* page background remains vibrant */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .container {
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Elegant calculator background */
+  .calculator {
+    background: linear-gradient(135deg, #2b2d42, #8d99ae);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+  }
+  
+  .display {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 2.2rem;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: right;
+    margin-bottom: 18px;
+    overflow-x: auto;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  
+  /* Base button styles */
+  .btn {
+    padding: 18px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff20;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    backdrop-filter: blur(4px);
+    border: 1px solid #ffffff30;
+  }
+  
+  /* Brighten button on hover */
+  .btn:hover {
+    filter: brightness(1.3);
+    transform: scale(1.05);
+  }
+  
+  /* Slight tap effect */
+  .btn:active {
+    transform: scale(0.95);
+  }
+  
+  /* Operator buttons */
+  .operator {
+    background-color: #ff6b6b;
+  }
+  
+  .operator:hover {
+    background-color: #ff7e7e;
+  }
+  
+  /* Special function buttons */
+  .special {
+    background-color: #48dbfb;
+  }
+  
+  .special:hover {
+    background-color: #60e3ff;
+  }
+  
+  /* Equal button */
+  .equal {
+    grid-column: span 2;
+    background-color: #1dd1a1;
+  }
+  
+  .equal:hover {
+    background-color: #2ef2bd;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 480px) {
+    .calculator {
+      padding: 18px 14px;
+    }
+  
+    .btn {
+      padding: 14px;
+      font-size: 1.2rem;
+    }
+  
+    .display {
+      font-size: 1.8rem;
+      padding: 14px;
+    }
+  
+    .title {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+  }
+  
+  /* Heading animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
