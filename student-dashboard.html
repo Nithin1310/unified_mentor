@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Appointment System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2 class="sidebar-title">Student Portal</h2>
+            </div>
+            
+            <div class="nav-menu">
+                <div class="nav-item">
+                    <a href="#dashboard" class="nav-link active" data-section="dashboard">
+                        <span class="nav-icon">🏠</span>
+                        <span>Dashboard</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#book-appointment" class="nav-link" data-section="book-appointment">
+                        <span class="nav-icon">📅</span>
+                        <span>Book Appointment</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#my-appointments" class="nav-link" data-section="my-appointments">
+                        <span class="nav-icon">📋</span>
+                        <span>My Appointments</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#profile" class="nav-link" data-section="profile">
+                        <span class="nav-icon">👤</span>
+                        <span>Profile</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <span class="nav-icon">🚪</span>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard-section" class="content-section active">
+                <div class="dashboard-header">
+                    <h1 class="welcome-title">Welcome back, Nithin!</h1>
+                    <p class="welcome-subtitle">Here is your appointments today.</p>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <div class="card-icon">📅</div>
+                            <h3 class="card-title">Total Appointments</h3>
+                        </div>
+                        <div class="card-content">
+                            <p style="font-size: 2rem; font-weight: 600; color: #4CAF50;">5</p>
+                            <p>Appointments booked this month</p>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <div class="card-icon">⏰</div>
+                            <h3 class="card-title">Pending Appointments</h3>
+                        </div>
+                        <div class="card-content">
+                            <p style="font-size: 2rem; font-weight: 600; color: #FF9800;">2</p>
+                            <p>Waiting for teacher approval</p>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <div class="card-icon">✅</div>
+                            <h3 class="card-title">Approved Today</h3>
+                        </div>
+                        <div class="card-content">
+                            <p style="font-size: 2rem; font-weight: 600; color: #2196F3;">3</p>
+                            <p>Appointments scheduled for today</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <h2 style="margin-bottom: 1rem;">Upcoming Appointments</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Teacher</th>
+                                <th>Subject</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dr. VaradhaRaj Kumar</td>
+                                <td>Data Structures</td>
+                                <td>2025-03-15</td>
+                                <td>10:00 AM</td>
+                                <td><span class="status-badge status-approved">Approved</span></td>
+                            </tr>
+                            <tr>
+                                <td>Prof. JayaSri Nemala</td>
+                                <td>Computer Science</td>
+                                <td>2025-03-16</td>
+                                <td>2:00 PM</td>
+                                <td><span class="status-badge status-pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Dr. Emily Davis</td>
+                                <td>Physics</td>
+                                <td>2025-03-15</td>
+                                <td>11:30 AM</td>
+                                <td><span class="status-badge status-approved">Approved</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Book Appointment Section -->
+            <section id="book-appointment-section" class="content-section">
+                <div class="dashboard-header">
+                    <h1 class="welcome-title">Book New Appointment</h1>
+                    <p class="welcome-subtitle">Schedule a meeting with your teacher.</p>
+                </div>
+                
+                <div class="form-container">
+                    <form id="bookAppointmentForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="teacher" class="form-label">Select Teacher</label>
+                                <select id="teacher" name="teacher" class="form-select" required>
+                                    <option value="">Choose a teacher</option>
+                                    <option value="dr-sarah-johnson">Dr. VaradhaRaj Kumar - Data Structures</option>
+                                    <option value="prof-michael-chen">Prof. Jayasri Nemala - Computer Science</option>
+                                    <option value="dr-emily-davis">Dr. Konda Krishnudu - Physics</option>
+                                    <option value="dr-robert-wilson">Dr. Swathi Reddy - Chemistry</option>
+                                </select>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select id="subject" name="subject" class="form-select" required>
+                                    <option value="">Select subject</option>
+                                    <option value="mathematics">Data Structures</option>
+                                    <option value="computer-science">Computer Science</option>
+                                    <option value="physics">Physics</option>
+                                    <option value="chemistry">Chemistry</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date" class="form-label">Preferred Date</label>
+                                <input type="date" id="date" name="date" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="time" class="form-label">Preferred Time</label>
+                                <select id="time" name="time" class="form-select" required>
+                                    <option value="">Select time</option>
+                                    <option value="09:00">9:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="topic" class="form-label">Topic/Reason</label>
+                            <textarea id="topic" name="topic" class="form-input" rows="4" 
+                                      placeholder="Briefly describe the topic you want to discuss..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Book Appointment</span>
+                        </button>
+                    </form>
+                </div>
+            </section>
+            
+            <!-- My Appointments Section -->
+            <section id="my-appointments-section" class="content-section" style="display: block;">
+                <div class="dashboard-header">
+                <h1 class="welcome-title">My Appointments</h1>
+                <p class="welcome-subtitle">View and manage your appointment history.</p>
+                </div>
+
+                <div class="table-container">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Teacher</th>
+                        <th>Subject</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Topic</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>#001</td>
+                        <td>Dr. VaradhaRaj Kumar</td>
+                        <td>Data Structures</td>
+                        <td>2025-03-15</td>
+                        <td>10:00 AM</td>
+                        <td>Calculus doubts</td>
+                        <td><span class="status-badge status-approved">Approved</span></td>
+                        <td><button class="action-btn">Cancel</button></td>
+                    </tr>
+                    </tr>
+                            <tr>
+                                <td>#002</td>
+                                <td>Prof. Jayasri Nemala</td>
+                                <td>Computer Science</td>
+                                <td>2025-03-16</td>
+                                <td>2:00 PM</td>
+                                <td>Algorithm discussion</td>
+                                <td><span class="status-badge status-pending">Pending</span></td>
+                                <td>
+                                    <button class="action-btn btn-reject" onclick="cancelAppointment('002')">Cancel</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#003</td>
+                                <td>Dr. Konda Krishnudu</td>
+                                <td>Physics</td>
+                                <td>2025-03-16</td>
+                                <td>11:30 AM</td>
+                                <td>Quantum mechanics</td>
+                                <td><span class="status-badge status-approved">Approved</span></td>
+                                <td>
+                                    <button class="action-btn btn-reject" onclick="cancelAppointment('003')">Cancel</button>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+                </div>
+            </section>
+
+            <!-- Profile Section -->
+            <section id="profile-section" class="content-section">
+                <div class="dashboard-header">
+                    <h1 class="welcome-title">My Profile</h1>
+                    <p class="welcome-subtitle">Manage your account information.</p>
+                </div>
+                
+                <div class="profile-container">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            JD
+                        </div>
+                        <div class="profile-info">
+                            <h2>Nithin Manthapuri</h2>
+                            <p>Computer Science Student</p>
+                            <p>Roll No: 22R21A66A1</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tabs-container">
+                        <div class="tabs-nav">
+                            <button class="tab-btn active" data-tab="personal-info">Personal Information</button>
+                            <button class="tab-btn" data-tab="change-password">Change Password</button>
+                        </div>
+                        
+                        <div class="tab-content active" id="personal-info">
+                            <form id="profileForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" id="firstName" name="firstName" class="form-input" value="Nithin">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" id="lastName" name="lastName" class="form-input" value="Manthapuri">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" id="email" name="email" class="form-input" value="22r21a66a1@mlrit.edu">
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="rollNumber" class="form-label">Roll Number</label>
+                                        <input type="text" id="rollNumber" name="rollNumber" class="form-input" value="22R21A66A1" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="department" class="form-label">Department</label>
+                                        <input type="text" id="department" name="department" class="form-input" value="Computer Science" readonly>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="submit-btn">Update Profile</button>
+                            </form>
+                        </div>
+                        
+                        <div class="tab-content" id="change-password">
+                            <form id="passwordForm">
+                                <div class="form-group">
+                                    <label for="currentPassword" class="form-label">Current Password</label>
+                                    <input type="password" id="currentPassword" name="currentPassword" class="form-input" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="newPassword" class="form-label">New Password</label>
+                                    <input type="password" id="newPassword" name="newPassword" class="form-input" required minlength="6">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="confirmNewPassword" class="form-label">Confirm New Password</label>
+                                    <input type="password" id="confirmNewPassword" name="confirmNewPassword" class="form-input" required>
+                                </div>
+                                
+                                <button type="submit" class="submit-btn">Change Password</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
