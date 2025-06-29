@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Login - FitZone</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-background member-bg"></div>
+        <div class="login-form-wrapper">
+            <div class="login-form">
+                <div class="form-header">
+                    <h2>Member Login</h2>
+                    <p>Access your personal dashboard</p>
+                </div>
+                
+                <form id="memberLoginForm">
+                    <div class="input-group">
+                        <input type="email" id="memberEmail" required>
+                        <label for="memberEmail">Email Address</label>
+                        <span class="input-highlight"></span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" id="memberPassword" required>
+                        <label for="memberPassword">Password</label>
+                        <span class="input-highlight"></span>
+                    </div>
+                    
+                    <div class="error-message" id="memberError"></div>
+                    
+                    <button type="submit" class="login-btn member-btn">
+                        <span>Login</span>
+                        <div class="btn-loader"></div>
+                    </button>
+                </form>
+                
+                <div class="form-footer">
+                    <a href="index.html" class="back-link">← Back to Home</a>
+                    <div class="demo-credentials">
+                        <p><strong>Demo Credentials:</strong></p>
+                        <p>1) Email: kishore@fit.com</p>
+                        <p>Password: kishore8500</p>
+                        <p>2) Email: aaman@fit.com</p>
+                        <p>Password: aaman0007</p>
+                        <p>3) Email: karthik@fit.com</p>
+                        <p>Password: chintu420</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

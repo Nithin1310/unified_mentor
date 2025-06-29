@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - FitZone</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>FitZone Admin</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-section="dashboard">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-section="members">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-text">Members</span>
+                </a>
+                <a href="#" class="nav-item" data-section="staff">
+                    <span class="nav-icon">🏃‍♂️</span>
+                    <span class="nav-text">Staff</span>
+                </a>
+                <a href="#" class="nav-item" data-section="plans">
+                    <span class="nav-icon">💳</span>
+                    <span class="nav-text">Plans</span>
+                </a>
+                <a href="#" class="nav-item" data-section="attendance">
+                    <span class="nav-icon">📅</span>
+                    <span class="nav-text">Attendance</span>
+                </a>
+                <a href="#" class="nav-item" data-section="payments">
+                    <span class="nav-icon">💰</span>
+                    <span class="nav-text">Payments</span>
+                </a>
+                <a href="#" class="nav-item" data-section="reports">
+                    <span class="nav-icon">📈</span>
+                    <span class="nav-text">Reports</span>
+                </a>
+                <a href="index.html" class="nav-item logout">
+                    <span class="nav-icon">🚪</span>
+                    <span class="nav-text">Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="content-section active">
+                <div class="section-header">
+                    <h2>Dashboard Overview</h2>
+                    <p>Welcome back, Admin! Here's your gym's performance at a glance.</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-info">
+                            <h3>97</h3>
+                            <p>Active Members</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-info">
+                            <h3>₹1,67,850</h3>
+                            <p>Monthly Revenue</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📅</div>
+                        <div class="stat-info">
+                            <h3>89%</h3>
+                            <p>Attendance Rate</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏃‍♂️</div>
+                        <div class="stat-info">
+                            <h3>12</h3>
+                            <p>Staff Members</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Members Section -->
+            <section id="members" class="content-section">
+                <div class="section-header">
+                    <h2>Member Management</h2>
+                    <button class="add-btn" onclick="showAddMemberModal()">Add New Member</button>
+                </div>
+                
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Plan</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="membersTable">
+                            <tr>
+                                <td>Pentala Kishore</td>
+                                <td>kishore@fit.com</td>
+                                <td>Premium</td>
+                                <td><span class="status active">Active</span></td>
+                                <td>
+                                    <button class="action-btn edit">Edit</button>
+                                    <button class="action-btn delete">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Aaman Kumar</td>
+                                <td>aaman@fit.com</td>
+                                <td>Basic</td>
+                                <td><span class="status active">Active</span></td>
+                                <td>
+                                    <button class="action-btn edit">Edit</button>
+                                    <button class="action-btn delete">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Staff Section -->
+            <section id="staff" class="content-section">
+                <div class="section-header">
+                    <h2>Staff Management</h2>
+                    <button class="add-btn" onclick="showAddStaffModal()">Add New Staff</button>
+                </div>
+                
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Role</th>
+                                <th>Email</th>
+                                <th>Shift</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="staffTable">
+                            <tr>
+                                <td>Nawin Kumar</td>
+                                <td>Personal Trainer</td>
+                                <td>nawin@fit.com</td>
+                                <td>Morning</td>
+                                <td>
+                                    <button class="action-btn edit">Edit</button>
+                                    <button class="action-btn delete">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Srishanth reddy</td>
+                                <td>Personal Trainer</td>
+                                <td>srishanth@fit.com</td>
+                                <td>Afternoon</td>
+                                <td>
+                                    <button class="action-btn edit">Edit</button>
+                                    <button class="action-btn delete">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Plans Section -->
+            <section id="plans" class="content-section">
+                <div class="section-header">
+                    <h2>Membership Plans</h2>
+                </div>
+                
+                <div class="plans-grid">
+                    <div class="plan-card">
+                        <h3>Basic Plan</h3>
+                        <div class="plan-price">₹899/month</div>
+                        <ul class="plan-features">
+                            <li>Gym Access</li>
+                            <li>Basic Equipment</li>
+                            <li>Locker Room</li>
+                        </ul>
+                    </div>
+                    <div class="plan-card featured">
+                        <h3>Premium Plan</h3>
+                        <div class="plan-price">₹1,399/month</div>
+                        <ul class="plan-features">
+                            <li>Full Gym Access</li>
+                            <li>Personal Training</li>
+                            <li>Group Classes</li>
+                            <li>Nutrition Guidance</li>
+                        </ul>
+                    </div>
+                    <div class="plan-card">
+                        <h3>VIP Plan</h3>
+                        <div class="plan-price">₹1,999/month</div>
+                        <ul class="plan-features">
+                            <li>All Premium Features</li>
+                            <li>24/7 Access</li>
+                            <li>Private Locker</li>
+                            <li>Guest Passes</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Attendance Section -->
+            <section id="attendance" class="content-section">
+                <div class="section-header">
+                    <h2>Attendance Log</h2>
+                </div>
+                
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Member</th>
+                                <th>Check-in Time</th>
+                                <th>Check-out Time</th>
+                                <th>Duration</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="attendanceTable">
+                            <tr>
+                                <td>Pentala Kishore</td>
+                                <td>09:30 AM</td>
+                                <td>11:00 AM</td>
+                                <td>1h 30m</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Karthik Lomte</td>
+                                <td>10:15 AM</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><span class="status active">In Progress</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Payments Section -->
+            <section id="payments" class="content-section">
+                <div class="section-header">
+                    <h2>Payment Records</h2>
+                </div>
+                
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Member</th>
+                                <th>Amount</th>
+                                <th>Plan</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="paymentsTable">
+                            <tr>
+                                <td>Aaman Kumar</td>
+                                <td>₹1,399.00</td>
+                                <td>Premium</td>
+                                <td>2024-01-15</td>
+                                <td><span class="status paid">Paid</span></td>
+                            </tr>
+                            <tr>
+                                <td>Karthik Lomte</td>
+                                <td>₹899.00</td>
+                                <td>Basic</td>
+                                <td>2024-01-10</td>
+                                <td><span class="status paid">Paid</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Reports Section -->
+            <section id="reports" class="content-section">
+                <div class="section-header">
+                    <h2>Reports & Analytics</h2>
+                </div>
+                
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <h3>Monthly Revenue</h3>
+                        <div class="chart-placeholder">
+                            <div class="chart-bar" style="height: 60%"><strong>Jan</strong></div>
+                            <div class="chart-bar" style="height: 80%"><strong>Feb</strong></div>
+                            <div class="chart-bar" style="height: 45%"><strong>March</strong></div>
+                            <div class="chart-bar" style="height: 90%"><strong>April</strong></div>
+                            <div class="chart-bar" style="height: 70%"><strong>June</strong></div>
+                        </div>
+                    </div>
+                    <div class="report-card">
+                        <h3>Member Growth</h3>
+                        <div class="growth-stats">
+                            <div class="growth-item">
+                                <span class="growth-label">This Month</span>
+                                <span class="growth-value">+12</span>
+                            </div>
+                            <div class="growth-item">
+                                <span class="growth-label">Last Month</span>
+                                <span class="growth-value">+8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Add Member Modal -->
+    <div id="addMemberModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Member</h3>
+                <span class="close" onclick="closeModal('addMemberModal')">&times;</span>
+            </div>
+            <form id="addMemberForm">
+                <div class="input-group">
+                    <input type="text" id="memberName" required>
+                    <label for="memberName">Full Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="memberEmailAdd" required>
+                    <label for="memberEmailAdd">Email</label>
+                </div>
+                <div class="input-group">
+                    <select id="memberPlan" required>
+                        <option value="">Choose Plan</option>
+                        <option value="Basic">Basic - ₹899/month</option>
+                        <option value="Premium">Premium - ₹1,399/month</option>
+                        <option value="VIP">VIP - ₹1,999/month</option>
+                    </select>
+                    <label for="memberPlan">Membership Plan</label>
+                </div>
+                <button type="submit" class="modal-btn">Add Member</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

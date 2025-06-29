@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard - FitZone</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="member-dashboard">
+        <!-- Header -->
+        <header class="member-header">
+            <div class="header-content">
+                <div class="welcome-section">
+                    <h1>Welcome back, John!</h1>
+                    <p>Ready for another great workout?</p>
+                </div>
+                <div class="header-actions">
+                    <button class="check-in-btn">Check In</button>
+                    <a href="index.html" class="logout-btn">Logout</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="member-main">
+            <!-- Quick Stats -->
+            <section class="quick-stats">
+                <div class="stat-item">
+                    <div class="stat-icon">🏋️‍♂️</div>
+                    <div class="stat-details">
+                        <h3>24</h3>
+                        <p>Workouts This Month</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-details">
+                        <h3>15,350</h3>
+                        <p>Calories Burned</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-details">
+                        <h3>56h</h3>
+                        <p>Total Workout Time</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-details">
+                        <h3>87%</h3>
+                        <p>Goal Achievement</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dashboard Cards -->
+            <div class="dashboard-grid">
+                <!-- Membership Info -->
+                <div class="dashboard-card">
+                    <h3>Membership Details</h3>
+                    <div class="membership-info">
+                        <div class="info-row">
+                            <span class="label">Plan:</span>
+                            <span class="value premium">Premium</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Status:</span>
+                            <span class="value active">Active</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Expires:</span>
+                            <span class="value">March 15, 2027</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Member Since:</span>
+                            <span class="value">January 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Attendance -->
+                <div class="dashboard-card">
+                    <h3>Recent Workouts</h3>
+                    <div class="attendance-list">
+                        <div class="attendance-item">
+                            <div class="attendance-date">
+                                <span class="day">15</span>
+                                <span class="month">Jan</span>
+                            </div>
+                            <div class="attendance-details">
+                                <p class="workout-type">Strength Training</p>
+                                <p class="workout-time">1h 30m</p>
+                            </div>
+                        </div>
+                        <div class="attendance-item">
+                            <div class="attendance-date">
+                                <span class="day">13</span>
+                                <span class="month">Jan</span>
+                            </div>
+                            <div class="attendance-details">
+                                <p class="workout-type">Cardio Session</p>
+                                <p class="workout-time">45m</p>
+                            </div>
+                        </div>
+                        <div class="attendance-item">
+                            <div class="attendance-date">
+                                <span class="day">11</span>
+                                <span class="month">Jan</span>
+                            </div>
+                            <div class="attendance-details">
+                                <p class="workout-type">Yoga Class</p>
+                                <p class="workout-time">1h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment History -->
+                <div class="dashboard-card">
+                    <h3>Payment History</h3>
+                    <div class="payment-list">
+                        <div class="payment-item">
+                            <div class="payment-info">
+                                <span class="payment-date">June 2025</span>
+                                <span class="payment-plan">VIP Plan</span>
+                            </div>
+                            <span class="payment-amount">₹1,399.00</span>
+                        </div>
+                        <div class="payment-item">
+                            <div class="payment-info">
+                                <span class="payment-date">May 2025</span>
+                                <span class="payment-plan">Premium Plan</span>
+                            </div>
+                            <span class="payment-amount">₹1,399.00</span>
+                        </div>
+                        <div class="payment-item">
+                            <div class="payment-info">
+                                <span class="payment-date">April 2023</span>
+                                <span class="payment-plan">Premium Plan</span>
+                            </div>
+                            <span class="payment-amount">₹1,999.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workout Schedule -->
+                <div class="dashboard-card">
+                    <h3>Upcoming Classes</h3>
+                    <div class="schedule-list">
+                        <div class="schedule-item">
+                            <div class="schedule-time">
+                                <span class="time">09:00 AM</span>
+                                <span class="date">Tomorrow</span>
+                            </div>
+                            <div class="schedule-details">
+                                <p class="class-name">HIIT Training</p>
+                                <p class="instructor">with Srishanth Reddy</p>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-time">
+                                <span class="time">06:30 PM</span>
+                                <span class="date">Friday</span>
+                            </div>
+                            <div class="schedule-details">
+                                <p class="class-name">Yoga Flow</p>
+                                <p class="instructor">with Vaibhav Kumar Shukla</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

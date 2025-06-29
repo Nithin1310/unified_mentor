@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - FitZone</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-background"></div>
+        <div class="login-form-wrapper">
+            <div class="login-form">
+                <div class="form-header">
+                    <h2>Admin Login</h2>
+                    <p>Access your administrative dashboard</p>
+                </div>
+                
+                <form id="adminLoginForm">
+                    <div class="input-group">
+                        <input type="email" id="adminEmail" required>
+                        <label for="adminEmail">Email Address</label>
+                        <span class="input-highlight"></span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" id="adminPassword" required>
+                        <label for="adminPassword">Password</label>
+                        <span class="input-highlight"></span>
+                    </div>
+                    
+                    <div class="error-message" id="adminError"></div>
+                    
+                    <button type="submit" class="login-btn">
+                        <span>Login</span>
+                        <div class="btn-loader"></div>
+                    </button>
+                </form>
+                
+                <div class="form-footer">
+                    <a href="index.html" class="back-link">← Back to Home</a>
+                    <div class="demo-credentials">
+                        <p><strong>Demo Credentials:</strong></p>
+                        <p>Email: nithin@fit.com</p>
+                        <p>Password: nithin760</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
